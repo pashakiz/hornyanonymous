@@ -1,0 +1,58 @@
+<script>
+    let preloader = document.body.querySelector('#page-preloader');
+    let searchTime = 4000; // time for search women
+    document.addEventListener('DOMContentLoaded', initPage);
+
+    function initPage() {
+        let displays = document.querySelectorAll('.display');
+        displays.forEach(display => display.style.display = 'none');
+        showAreaIndex();
+        initEvents();
+    }
+
+    function initEvents() {
+        let btnIndex = document.querySelectorAll('.btn-index');
+        btnIndex.forEach(function(btn){ // for mobile and desktop buttons
+            btn.addEventListener('click', handlerClickBtnIndex);
+        });
+    }
+
+    function handlerClickBtnIndex(e) {
+        showAreaSearch();
+        setTimeout(goToLogin, searchTime);
+    }
+
+    function showAreaIndex() {
+        document.body.classList.add('body_bg');
+        document.querySelector('.display.display_01').style.display = 'block';
+    }
+    function hideAreaIndex() {
+        //document.body.classList.remove('body_bg');
+        document.querySelector('.display.display_01').style.display = 'none';
+    }
+
+    function showAreaSearch() {
+        document.querySelector('.firstscreen__content1').classList.add('btn-pressed');
+        document.querySelector('.firstscreen__content2').style.display = 'block';
+    }
+
+    function goToLogin() {
+        preloaderOn();
+        setTimeout(hideAreaIndex, 500);
+        setTimeout(showAreaLogin, 500);
+    }
+
+    function showAreaLogin() {
+        document.querySelector('.display.display_02').style.display = 'block';
+        document.querySelector('.secondscreen.secondscreen_index').classList.remove('secondscreen_index');
+        setTimeout(preloaderOff, 500);
+    }
+
+    function preloaderOn() {
+        preloader.classList.remove('done');
+    }
+    function preloaderOff() {
+        preloader.classList.add('done');
+    }
+
+</script>
