@@ -50,10 +50,6 @@ const cssLoaders = extra => {
   const loaders = [
     {
       loader: MiniCssExtractPlugin.loader,
-      // options: {
-      //   hmr: isDev,
-      //   reloadAll: true,
-      // },
     },
     {
       loader: 'css-loader',
