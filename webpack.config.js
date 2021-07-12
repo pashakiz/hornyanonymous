@@ -48,7 +48,13 @@ const filename = ext => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
 const cssLoaders = extra => {
   const loaders = [
-    { loader: MiniCssExtractPlugin.loader, },
+    {
+      loader: MiniCssExtractPlugin.loader,
+      // options: {
+      //   hmr: isDev,
+      //   reloadAll: true,
+      // },
+    },
     {
       loader: 'css-loader',
       options: {
@@ -86,7 +92,8 @@ const babelOptions = preset => {
 }
 
 module.exports = {
-  mode: 'development', // "production" | "development" | "none"
+  mode: isProd ? 'production' : 'development',
+  target: isProd ? 'browserslist' : 'web',
   entry: [
     '@babel/polyfill',
     './src/js/index.js'
@@ -100,7 +107,7 @@ module.exports = {
     port: 4250,
     hot: isDev
   },
-  devtool: isDev ? 'source-map' : '',
+  devtool: isDev ? 'source-map' : false,
   resolve: {
     //extensions: ['.js', '.json', '.png'],
     alias: {
