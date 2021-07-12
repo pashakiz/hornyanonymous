@@ -1,9 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
-const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const fs = require('fs');
 const webpack = require('webpack');
@@ -38,24 +37,18 @@ const optimization = () => {
   }
   if (isProd) {
     config.minimizer = [
-      new OptimizeCssAssetWebpackPlugin(),
+      new CssMinimizerPlugin(),
       new TerserWebpackPlugin()
     ]
   }
   return config
 }
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
+const filename = ext => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
 const cssLoaders = extra => {
   const loaders = [
-    {
-      loader: MiniCssExtractPlugin.loader,
-      options: {
-        hmr: isDev,
-        reloadAll: true
-      },
-    },
+    { loader: MiniCssExtractPlugin.loader, },
     {
       loader: 'css-loader',
       options: {
@@ -100,7 +93,8 @@ module.exports = {
   ],
   output: {
     filename: 'js/' + filename('js'),
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    clean: true
   },
   devServer: {
     port: 4250,
@@ -121,16 +115,13 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
+        type: 'asset/source',
         include: path.resolve(__dirname, 'src/html/includes'),
-        loader: 'html-loader',
-        options: {
-          minimize: false,
-        }
       },
       {
-        test: /\.js$/,
+        test: /\.m?js$/,
         exclude: /node_modules/,
-        loader: {
+        use: {
           loader: 'babel-loader',
           options: babelOptions()
         }
@@ -142,48 +133,21 @@ module.exports = {
       {
         test: /\.s[ac]ss$/,
         use: cssLoaders([
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: function () { // postcss plugins, can be exported to postcss.config.js
-                return [
-                  require('autoprefixer')
-                ];
-              }
-            }
-          },
-          { loader: 'sass-loader' } ])
+            { loader: 'postcss-loader', },
+            { loader: 'sass-loader' }
+          ])
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
-        exclude: path.resolve(__dirname, 'src/fonts'),
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: path.resolve(__dirname, 'dist/img')
-            }
-          }
-        ]
+        test: /\.(png|jpg|jpeg|svg|gif|mp4)$/,
+        type: 'asset/resource',
       },
       {
         test: /\.(ttf|otf|svg|woff|woff2|eot)$/,
-        exclude: path.resolve(__dirname, 'src/img'),
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: path.resolve(__dirname, 'dist/fonts')
-            }
-          }
-        ]
+        type: 'asset/resource',
       },
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/' + filename('css'),
     }),
