@@ -202,6 +202,7 @@ p {
 }
 .container_text-center {
   p {
+    text-align: center;
     @media (min-width: 992px) {
       text-align: center;
     }
