@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  &.container_xxl { //profile, list
+  &.container_xxl {
     @media (min-width: 1500px) {
       max-width: $container-xxl + $grid-gutter-width;
     }
@@ -33,10 +33,10 @@ body {
       max-width: $container-xxl + $grid-gutter-width;
     }
   }
-  &.container_xxxl { //header
-    @media (min-width: 1500px) {
-      max-width: $container-xxl + $grid-gutter-width;
-    }
+  &.container_xxxl {
+    //@media (min-width: 1500px) {
+    //  max-width: $container-xxl + $grid-gutter-width;
+    //}
     @media (min-width: 1920px) {
       max-width: $container-xxxl + $grid-gutter-width;
     }
@@ -46,18 +46,18 @@ body {
   }
   &.container_settings {}
   &.container_profile {
-    .container__inner_not {
-      @media (min-width: 1200px) {
-        padding: 0 10px;
-      }
-      @media (min-width: 1500px) {
-        padding: 0 87px;
-      }
-    }
+    .container__inner {}
   }
   &.container_text {
     @media (min-width: 1200px) {
-      max-width: 1088px + $grid-gutter-width;
+      padding-left: 15px + 11px;
+      padding-right: 15px + 11px;
+    }
+  }
+  &.container_unsubscribe {
+    @media (min-width: 1200px) {
+      padding-left: 15px + 162px;
+      padding-right: 15px + 162px;
     }
   }
   &.container_footer {}
