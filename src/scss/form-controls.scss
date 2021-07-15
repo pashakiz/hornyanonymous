@@ -27,12 +27,12 @@ body textarea:required:valid {
   border: $input_border;
   background-color: $input_bg;
   border-radius: $input_border_radius;
-  padding: 20px 31px;
+  padding: 19px 28px 15px;
   color: $input_txt_color;
   font-family: $input_txt_family;
   font-size: $input_txt_xs_size;
   line-height: $input_txt_xs_lh;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   &:hover {
     background-color: $input_hover_bg;
@@ -49,7 +49,7 @@ body textarea:required:valid {
     opacity: 0.7;
   }
   @media (min-width: 992px) {
-    padding: 34px 53px 33px;
+    padding: 31px 48px 29px;
     font-size: $input_txt_size;
     line-height: $input_txt_lh;
   }
@@ -71,38 +71,38 @@ body textarea:required:valid {
       //font-size: 20px;
     }
     @media (min-width: 1500px) {
-      padding: 34px 53px 33px;
+      padding: 31px 48px 29px;
       font-size: $input_txt_size;
     }
   }
 }
 input.form-control {
-  height: 56px;
+  height: 50px;
   @media (min-width: 992px) {
-    height: 56px;
+    height: 50px;
   }
   @media (min-width: 1200px) {
-    height: 98px;
+    height: 85px;
   }
   &.form-control_login {
-    height: 56px;
+    height: 50px;
     @media (min-width: 1200px) {
-      height: 98px;
+      height: 85px;
     }
     @media (min-width: 1500px) {
-      height: 98px;
+      height: 85px;
     }
   }
 }
 textarea.form-control {
   border-radius: $textarea_border_radius_mob;
-  min-height: 107px;
+  min-height: 128px;
   @media (min-width: 768px) {
-    height: 130px;
+    height: 128px;
   }
   @media (min-width: 1200px) {
     border-radius: $textarea_border_radius;
-    height: 186px;
+    height: 172px;
   }
 }
 .form-group_20 {
@@ -172,9 +172,9 @@ textarea.form-control {
   }
 }
 .form-group_input {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
   @media (min-width: 1200px) {
-    margin-bottom: 53px;
+    margin-bottom: 32px;
   }
 }
 .form-group_input2 {
@@ -184,15 +184,15 @@ textarea.form-control {
   }
 }
 .form-group_check1 {
-  margin: 0 0 43px;
+  margin: 32px 0 24px;
   @media (min-width: 1200px) {
-    margin: 0 0 75px;
+    margin: 45px 0;
   }
 }
 .form-group_check {
-  margin: 44px 0 42px;
+  margin: 32px 0 29px;
   @media (min-width: 1200px) {
-    margin: 45px 0 41px;
+    margin: 45px 0 45px;
   }
 }
 .form-group_settings-btn {
@@ -602,25 +602,42 @@ textarea.form-control {
     }
     .custom-control-label {
       text-transform: uppercase;
-      font-size: 15px;
-      line-height: 19px;
-      padding: 14px 0;
+      font-size: $switch_label_fontsize_mob;
+      line-height: 1;
+      padding: 5px 0;
       &::before {
-        left: - $switch_bg_width_mob - $switch_margin_right_inline_mob;
+        top: calc(0.25rem + 1px);
+        left: - $switch_bg_width_mob - $switch_margin_right_inline_mob + 8px;
+        transform: none;
       }
       &::after {
+        top: calc(0.25rem - 4px);
         left: - $switch_bg_width_mob - $switch_margin_right_inline_mob - 2px;
+        transform: none;
       }
       @media (min-width: 992px) {
-        font-size: 24px;
-        line-height: 30px;
-        padding: 40px 0;
+        font-size: 21px;
+        line-height: 1;
+        padding: 5px 0;
         &::before {
           left: - $switch_bg_width - $switch_margin_right_inline + 0px;
         }
         &::after {
-          left: - $switch_bg_width - $switch_margin_right_inline + 20px;
-          margin-left: -($switch_dot_size_w/2) - 2px;
+          top: calc(0.25rem - 9px);
+          left: - $switch_bg_width - $switch_margin_right_inline + 12px;
+          //margin-left: -($switch_dot_size_w/2) - 2px;
+        }
+      }
+    }
+    .custom-control-input {
+      &:checked {
+        ~.custom-control-label {
+          &::after {
+            transform: translateX(29px);
+            @media (min-width: 992px) {
+              transform: translateX(40px);
+            }
+          }
         }
       }
     }
@@ -629,13 +646,13 @@ textarea.form-control {
 
 .custom-file {
   display: block;
-  width: 180px;
+  width: 185px;
   height: auto;
   @media (min-width: 768px) {
-    width: 180px;
+    width: 185px;
   }
   @media (min-width: 1200px) {
-    width: 280px;
+    width: 295px;
   }
   .custom-file-input {
     width: 100%;
@@ -760,24 +777,27 @@ textarea.form-control {
     }
   }
   &.btn_3 { //change photo
-    width: 180px;
-    height: 42px;
+    width: 185px;
+    height: 40px;
     padding: 14px 10px 14px;
-    border-radius: 15px;
-    font-size: 15px;
-    background-color: #fff;
-    color: $font_color;
+    border-radius: 33px;
+    font-family: $font_family;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 13px;
+    background-color: rgba(#fff, 0.9);
+    color: $body_bg_color;
     border: none;
     &:hover {
-      background-color: $btn_bg_color_hover;
-      color: $font_color2;
+      background-color: $btn_bg_color;
+      color: $font_color;
     }
     @media (min-width: 992px) {}
     @media (min-width: 1200px) {
-      font-size: 24px;
+      font-size: 22px;
       padding: 20px 15px 20px;
-      width: 280px;
-      height: 66px;
+      width: 295px;
+      height: 60px;
     }
   }
   &.btn_4 { //signout

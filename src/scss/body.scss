@@ -44,7 +44,11 @@ body {
   &.container_index { //index, progress, login
     @media (min-width: 1920px) {}
   }
-  &.container_settings {}
+  &.container_settings {
+    @media (min-width: 1500px) {
+      max-width: $container-xxl + $grid-gutter-width;
+    }
+  }
   &.container_profile {
     .container__inner {}
   }

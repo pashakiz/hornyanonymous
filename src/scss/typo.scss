@@ -243,15 +243,18 @@ a {
   }
 }
 .link2 {
-  font-family: $font_family;
-  color: $font_color3;
+  font-family: $font_family2;
   font-weight: 400;
-  font-size: 16px;
+  color: $font_color;
+  font-size: 14px;
   text-transform: uppercase;
   &:hover {
     color: $link_hover_color2;
   }
-  @media (min-width: 768px) {
-    font-size: 22px;
+  @media (min-width: 992px) {
+    font-family: $font_family;
+    font-weight: 300;
+    color: $link_color;
+    font-size: 24px;
   }
 }
