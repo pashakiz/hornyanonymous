@@ -88,16 +88,6 @@ $(function() {
         //slider (Profile gallery)
         owlInitProfile('.up-slider');
 
-        //slider (Profile gallery) set first active
-        const first = document.body.querySelector('.up-slider.owl-carousel .owl-item');
-        if (first != null) first.classList.add('active_first');
-        $('.up-slider.owl-carousel').on('translated.owl.carousel', function(event) {
-            const all = document.body.querySelectorAll('.up-slider.owl-carousel .owl-item.active_first');
-            all.forEach(item => item.classList.remove('active_first'));
-            const first = document.body.querySelector('.up-slider.owl-carousel .owl-item.active');
-            first.classList.add('active_first');
-        });
-
     });
 
     //init owl carousel for custom screen width
@@ -132,7 +122,7 @@ $(function() {
         $('.owl-carousel' + el_class).owlCarousel({
             //loop: true,
             items: 1,
-            dots: false,
+            dots: true,
             nav: false,
             navText: ['',''],
             margin: 5,
