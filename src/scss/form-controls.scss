@@ -185,6 +185,9 @@ textarea.form-control {
 }
 .form-group_check1 {
   margin: 32px 0 24px;
+  @media (min-width: 992px) {
+    margin: 38px 0;
+  }
   @media (min-width: 1200px) {
     margin: 45px 0;
   }
@@ -356,7 +359,7 @@ textarea.form-control {
     &.custom-control-inline {
       margin-right: 0;
       + .custom-control-inline {
-        margin-left: 50px;
+        margin-left: 45px;
         @media (min-width: 1200px) {
           margin-left: 90px;
         }
@@ -366,7 +369,7 @@ textarea.form-control {
   .custom-control-label {
     color: $radio_txt_color;
     font-family: $radio_txt_family;
-    font-weight: 400;
+    font-weight: $radio_txt_weight;
     font-size: $radio_txt_xs_size;
     line-height: $radio_txt_xs_lh;
     text-transform: uppercase;
@@ -379,7 +382,7 @@ textarea.form-control {
       background-color: $radio_bg_color;
       border: $radio_border;
       outline: none !important;
-      border-radius: 9px;
+      border-radius: 100%;
     }
     &::after {
       top: $radio_xs_marker_top;
@@ -387,7 +390,7 @@ textarea.form-control {
       width: $radio_xs_marker_width;
       height: $radio_xs_marker_height;
       outline: none !important;
-      border-radius: 3px;
+      border-radius: 100%;
       background: no-repeat 50% / 50% 50%;
     }
     @media (min-width: 992px) {
@@ -398,14 +401,12 @@ textarea.form-control {
         left: $radio_left;
         width: $radio_width;
         height: $radio_height;
-        border-radius: 15px;
       }
       &::after {
         top: $radio_marker_top;
         left: $radio_marker_left;
         width: $radio_marker_width;
         height: $radio_marker_height;
-        border-radius: 7px;
       }
     }
   }
