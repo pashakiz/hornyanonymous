@@ -54,19 +54,6 @@
   }
 }
 
-.login-form {
-  width: 100%;
-  max-width: 404px;
-  margin: 0 auto;
-  @media (min-width: 1200px) {
-    max-width: 100%;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-  }
-  .login-form__inner {}
-}
-
 .login-slider-wrap {
   margin: 0 -15px 39px 0;
   @media (min-width: 1200px) {
@@ -95,99 +82,5 @@
     @media (min-width: $user_list_item_breakpoint) {
       margin: 46px 0 0 !important;
     }
-  }
-}
-
-.login-label {
-  display: none;
-  @media (min-width: 1200px) {
-    display: block;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 38px;
-    color: $font_color;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0 0 45px;
-  }
-  @media (min-width: 1500px) {
-    font-size: 30px;
-    margin: 0 0 96px;
-  }
-  @media (min-width: 1920px) {
-    font-size: 30px;
-    margin: 0 0 96px;
-  }
-}
-
-.login-extra {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 103px 0 58px;
-}
-
-.login-progress {
-  width: 100%;
-  max-width: 414px;
-  margin: 0 auto;
-  padding-top: 17px;
-  @media (min-width: 1200px) {
-    padding-top: 8px;
-  }
-}
-
-.loading {
-  margin-bottom: 55px;
-  @media (min-width: 1200px) {
-    margin-bottom: 68px;
-  }
-}
-.loading__title {
-  font-family: $font_family;
-  font-weight: 600;
-  color: $font_color;
-  font-size: 17px;
-  line-height: 24px;
-  margin-bottom: 13px;
-  text-align: center;
-  @media (min-width: 1200px) {
-    font-size: 27px;
-    line-height: 37px;
-    margin-bottom: 21px;
-  }
-}
-.loading__progress {}
-.progress_loading {
-  width: 100%;
-  height: 41px;
-  border: 5px solid #C992FF;
-  background-color: #C992FF;
-  border-radius: 100px;
-  @media (min-width: 1200px) {
-    height: 60px;
-    border: 9px solid #C992FF;
-  }
-  .progress-bar {
-    background-color: $btn_bg_color;
-    border-radius: 100px;
-  }
-}
-.progress__label {
-  font-family: $font_family;
-  font-weight: 400;
-  text-align: center;
-  width: 100%;
-  height: 30px;
-  color: #fff;
-  font-size: 15px;
-  line-height: 1;
-  text-transform: uppercase;
-  position: absolute;
-  top: calc(50% - 8px);
-  @media (min-width: 1200px) {
-    height: 40px;
-    font-size: 22px;
-    top: calc(50% - 12px);
   }
 }

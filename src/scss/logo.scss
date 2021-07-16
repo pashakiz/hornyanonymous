@@ -32,89 +32,50 @@
 
 .logo_main {
   flex-direction: column;
-  margin: 52px 0 0;
+  margin: 64px 0 50px;
   @media (min-width: 992px) {
-    margin: 52px 0 0;
+    margin: 64px 0 50px;
   }
   @media (min-width: 1200px) {
     flex-direction: row;
     justify-content: flex-start;
-    margin: 80px 0 0;
+    margin: 133px 0 108px;
   }
   @media (min-width: 1500px) {
-    margin: 143px 0 0;
+    margin: 133px 0 108px;
   }
   @media (min-width: 1920px) {
-    margin: 143px 0 0;
+    margin: 133px 0 108px;
   }
   .logo__img {
-    width: 44px;
-    height: 44px;
-    flex: 0 0 44px;
-    margin: 0 0 16px 0;
+    width: 74px;
+    height: 34px;
+    margin: 0 0 12px 0;
     @media (min-width: 992px) {
-      width: 65px;
-      height: 65px;
-      flex: 0 0 65px;
-      margin: 0 0 16px 0;
+      width: 74px;
+      height: 34px;
     }
     @media (min-width: 1200px) {
-      margin: 0 24px 0 0;
+      margin: 8px 20px 0;
     }
   }
   .logo__txt {
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 17px;
+    line-height: 28px;
     text-align: center;
-    @media (min-width: 992px) {
-      font-size: 30px;
-      line-height: 35px;
-    }
+    letter-spacing: 3px;
+    @media (min-width: 992px) {}
     @media (min-width: 1200px) {
-      letter-spacing: 3px;
-      font-size: 24px;
+      font-size: 32px;
       text-align: left;
-      line-height: 38px;
-      padding-top: 10px;
+      line-height: 44px;
+      letter-spacing: 5px;
     }
     @media (min-width: 1500px) {
-      letter-spacing: 5px;
-      font-size: 30px;
+      font-size: 32px;
     }
     @media (min-width: 1920px) {
-      letter-spacing: 5px;
-      font-size: 30px;
-    }
-  }
-}
-
-.logo_search {
-  flex-direction: column;
-  .logo__img {
-    width: 129px;
-    height: 127px;
-    margin: 0 0 17px 0;
-    background-image: url('../img/icons/heart.svg');
-    animation: 2s heartbeat1 infinite linear, 1s heartspin infinite linear;
-    position: absolute;
-    @media (min-width: 1200px) {
-      width: 269px;
-      height: 263px;
-      margin: 0 0 55px 0;
-      animation: 2s heartbeat2 infinite linear, 1s heartspin infinite linear;
-    }
-  }
-  .logo__txt {
-    font-size: 23px;
-    line-height: 37px;
-    letter-spacing: 1px;
-    text-align: center;
-    padding: 180px 0 0;
-    @media (min-width: 1200px) {
-      font-size: 30px;
-      line-height: 38px;
-      letter-spacing: 3px;
-      padding: 318px 0 0;
+      font-size: 32px;
     }
   }
 }

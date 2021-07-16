@@ -10,7 +10,7 @@ body {
   }
 
   &.body_bg {
-    background-color: $bg_light_3;
+    background-color: $btn_bg_color;
   }
 }
 
@@ -32,7 +32,12 @@ body {
     }
   }
   &.container_index { //index, progress, login
-    @media (min-width: 1920px) {}
+    @media (min-width: 1500px) {
+      max-width: $container-xxl + $grid-gutter-width;
+    }
+    @media (min-width: 1920px) {
+      max-width: $container-xxxl + $grid-gutter-width;
+    }
   }
   &.container_settings {
     @media (min-width: 1500px) {

@@ -82,30 +82,39 @@ h1 {
     }
   }
   &.h1_login {
-    font-size: 23px;
-    line-height: 33px;
-    margin: 35px 0 37px;
+    font-size: 36px;
+    line-height: 58px;
+    margin: 0 0 25px;
     color: $font_color;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
     @media (min-width: 1200px) {
-      text-transform: none;
-      font-weight: 500;
       text-align: left;
-      font-size: 58px;
-      line-height: 76px;
-      margin: 98px 0 40px;
-      color: $font_color;
+      font-size: 48px;
+      line-height: 70px;
+      margin: 0 0 63px;
     }
     @media (min-width: 1500px) {
-      font-size: 75px;
-      line-height: 92px;
-      margin: 98px 0 48px;
+      font-size: 64px;
+      line-height: 95px;
+      margin: 0 0 63px;
     }
     @media (min-width: 1920px) {
-      font-size: 75px;
-      line-height: 92px;
-      margin: 98px 0 48px;
+      font-size: 64px;
+      line-height: 95px;
+      margin: 0 0 63px;
+    }
+    .h1_row {
+      font-size: 28px;
+      @media (min-width: 1200px) {
+        font-size: 35px;
+      }
+      @media (min-width: 1500px) {
+        font-size: 49px;
+      }
+      @media (min-width: 1920px) {
+        font-size: 49px;
+      }
     }
   }
 }
@@ -139,10 +148,27 @@ h2 {
       font-size: 49px;
     }
   }
-  &.h2_list {
-    @media (min-width: 992px) {}
+  &.h2_index {
+    font-size: 34px;
+    line-height: 55px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    @media (min-width: 992px) {
+      font-size: 58px;
+      line-height: 70px;
+      margin-bottom: 52px;
+    }
     @media (min-width: 1200px) {
-      line-height: 144px;
+      font-size: 60px;
+      line-height: 80px;
+      margin-bottom: 52px;
+      text-align: left;
+      text-transform: none;
+    }
+    @media (min-width: 1920px) {
+      font-size: 70px;
+      line-height: 103px;
+      margin-bottom: 52px;
     }
   }
 }
@@ -208,15 +234,18 @@ p {
     }
   }
 }
-.secondscreen_index {
+.secondscreen {
   p {
+    font-size: 14px;
     line-height: 36px !important;
+    text-align: center;
     @media (min-width: 768px) {
       line-height: 36px !important;
     }
     @media (min-width: 1200px) {
+      text-align: left;
       line-height: 50px !important;
-      font-size: $font_size !important;
+      font-size: 20px !important;
     }
   }
 }

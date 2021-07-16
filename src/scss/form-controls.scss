@@ -55,24 +55,13 @@ body textarea:required:valid {
   }
   &.form-control_login {
     text-align: center;
-    background-color: $input_hover_bg;
-    &:hover {
-      background-color: $input_bg;
-      color: $input_hover_txt_color;
-    }
-    &:focus {
-      box-shadow: none;
-      background-color: $input_bg;
-      color: $input_hover_txt_color;
-      border-color: $btn_bg_color;
-    }
+    font-size: 15px;
     @media (min-width: 1200px) {
-      padding: 15px 35px;
-      //font-size: 20px;
+      padding: 19px 28px 15px;
     }
     @media (min-width: 1500px) {
+      font-size: 24px;
       padding: 31px 48px 29px;
-      font-size: $input_txt_size;
     }
   }
 }
@@ -87,7 +76,7 @@ input.form-control {
   &.form-control_login {
     height: 50px;
     @media (min-width: 1200px) {
-      height: 85px;
+      height: 50px;
     }
     @media (min-width: 1500px) {
       height: 85px;
@@ -133,32 +122,32 @@ textarea.form-control {
   }
 }
 .form-group_login {
-  max-width: 497px;
-  margin-bottom: 14px;
+  width: 100%;
+  margin-bottom: 19px;
   @media (min-width: 992px) {
-    margin-bottom: 23px;
-  }
-  @media (min-width: 1200px) {
-    width: 100%;
-    max-width: 400px;
     margin-bottom: 20px;
   }
-  @media (min-width: 1500px) {
-    width: 497px;
-    max-width: 497px;
+  @media (min-width: 1200px) {
     margin-bottom: 23px;
   }
+  @media (min-width: 1500px) {
+    margin-bottom: 25px;
+  }
   @media (min-width: 1920px) {
-    width: 497px;
-    max-width: 497px;
-    margin-bottom: 23px;
+    margin-bottom: 32px;
   }
 }
 .form-group_login-btn {
-  margin: 16px 0 0;
+  margin: 19px 0 0;
   position: relative;
   @media (min-width: 1200px) {
-    margin: 49px 0 0;
+    margin: 23px 0 0;
+  }
+  @media (min-width: 1500px) {
+    margin: 25px 0 0;
+  }
+  @media (min-width: 1920px) {
+    margin: 31px 0 0;
   }
 }
 .form-group_up-login {
@@ -735,26 +724,27 @@ textarea.form-control {
     @media (min-width: 1500px) {
       width: 100%;
       margin: 0;
-      height: 98px;
-      font-size: 24px;
-      padding: 35px 15px;
+      height: 96px;
+      font-size: 26px;
+      padding: 32px 15px;
     }
   }
   &.btn-login {
     @media (min-width: 992px) {
-      height: 72px;
-      padding: 23px 8px;
-      font-size: 24px;
+      width: auto;
+      height: 60px;
+      padding: 21px 9px;
+      font-size: 16px;
     }
     @media (min-width: 1200px) {
-      height: 98px;
       width: auto;
-      font-size: 24px;
-      padding: 23px 35px;
+      height: 60px;
+      padding: 21px 9px;
+      font-size: 16px;
     }
     @media (min-width: 1500px) {
       height: 98px;
-      font-size: 24px;
+      font-size: 26px;
       padding: 33px 15px 33px;
     }
   }
