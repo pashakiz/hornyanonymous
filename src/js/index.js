@@ -39,27 +39,25 @@ $(function() {
         });
 
         //custom sliders
-        owlInit('.login-slider', {
+        owlInit('.user-list-extra', {
             loop: true,
-            dots: false,
+            dots: true,
             items: 1,
             margin: 17,
             autoWidth: true,
             responsive:{
-                768:{
-                    margin: 17
+                320:{
+                    dots: true,
+                    items: 2,
+                    margin: 12
                 },
                 992:{
-                    margin: 17
+                    margin: 48
                 },
                 1200:{
-                    margin: 35
-                },
-                1500:{
-                    margin: 30
-                },
-                1920:{
-                    margin: 74
+                    dots: false,
+                    items: 4,
+                    margin: 48
                 },
             }
         });
@@ -148,27 +146,25 @@ $(function() {
 
     $(window).resize(function() {
         owlInitProfile('.up-slider');
-        owlInit('.login-slider', {
+        owlInit('.user-list-extra', {
             loop: true,
-            dots: false,
+            dots: true,
             items: 1,
             margin: 17,
             autoWidth: true,
             responsive:{
-                768:{
-                    margin: 17
+                320:{
+                    dots: true,
+                    items: 2,
+                    margin: 12
                 },
                 992:{
-                    margin: 17
+                    margin: 48
                 },
                 1200:{
-                    margin: 35
-                },
-                1500:{
-                    margin: 30
-                },
-                1920:{
-                    margin: 74
+                    dots: false,
+                    items: 4,
+                    margin: 48
                 },
             }
         });

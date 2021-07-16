@@ -344,7 +344,44 @@
     @media (min-width: 1200px) {}
   }
 
-  &.compatibility_list {}
+  &.compatibility_list {
+    .compatibility__chart {
+      +.compatibility__chart {
+        margin-left: 5px;
+        @media (min-width: $user_list_item_breakpoint) {}
+        @media (min-width: 1200px) {
+          margin-left: 10px;
+        }
+      }
+    }
+    .compatibility__progress {
+      &.progress {
+        width: 37px;
+        height: 10px;
+        @media (min-width: $user_list_item_breakpoint) {
+          width: 93px;
+          height: 28px;
+        }
+      }
+      .compatibility__progress-title {
+        font-size: 7px;
+        transform: translate(-50%, 0);
+        @media (min-width: $user_list_item_breakpoint) {
+          font-size: 17px;
+          transform: translate(-50%, -2px);
+        }
+      }
+    }
+    .compatibility__title {
+      font-size: 6px;
+      margin-bottom: 6px;
+      @media (min-width: $user_list_item_breakpoint) {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      @media (min-width: 1200px) {}
+    }
+  }
 
   &.compatibility_login {}
 }
