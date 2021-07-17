@@ -157,6 +157,7 @@
     background-color: $bg_light_2;
     border-radius: 33px;
     border: none;
+    transition: width 0.2s linear;
   }
   .search-progress__title {
     text-transform: uppercase;

@@ -1,6 +1,6 @@
 h1 {
   font-family: $font_family2;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 51px;
   line-height: 45px;
   color: $font_color;
@@ -44,45 +44,11 @@ h1 {
       margin: 0 0 75px;
     }
   }
-  &.h1_login {
-    font-size: 36px;
-    line-height: 58px;
-    margin: 0 0 25px;
-    color: $font_color;
-    font-weight: 400;
-    text-transform: uppercase;
-    @media (min-width: 1200px) {
-      text-align: left;
-      font-size: 48px;
-      line-height: 70px;
-      margin: 0 0 63px;
-    }
-    @media (min-width: 1500px) {
-      font-size: 64px;
-      line-height: 95px;
-      margin: 0 0 63px;
-    }
-    @media (min-width: 1920px) {
-      font-size: 64px;
-      line-height: 95px;
-      margin: 0 0 63px;
-    }
-    .h1_row {
-      font-size: 28px;
-      @media (min-width: 1200px) {
-        font-size: 35px;
-      }
-      @media (min-width: 1500px) {
-        font-size: 49px;
-      }
-      @media (min-width: 1920px) {
-        font-size: 49px;
-      }
-    }
-  }
 }
 
 .h1_search {
+  font-family: $font_family2;
+  font-weight: 400;
   color: $font_color;
   font-weight: 400;
   font-size: 29px;
@@ -104,6 +70,45 @@ h1 {
     font-size: 58px;
     line-height: 103px;
     margin: 0 0 96px;
+  }
+}
+
+.h1_login {
+  font-family: $font_family2;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 58px;
+  margin: 0 0 25px;
+  color: $font_color;
+  text-align: center;
+  text-transform: uppercase;
+  @media (min-width: 1200px) {
+    text-align: left;
+    font-size: 48px;
+    line-height: 70px;
+    margin: 0 0 63px;
+  }
+  @media (min-width: 1500px) {
+    font-size: 64px;
+    line-height: 95px;
+    margin: 0 0 63px;
+  }
+  @media (min-width: 1920px) {
+    font-size: 64px;
+    line-height: 95px;
+    margin: 0 0 63px;
+  }
+  .h1_row {
+    font-size: 28px;
+    @media (min-width: 1200px) {
+      font-size: 35px;
+    }
+    @media (min-width: 1500px) {
+      font-size: 49px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 49px;
+    }
   }
 }
 

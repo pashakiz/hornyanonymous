@@ -1,6 +1,7 @@
 <script>
     let preloader = document.body.querySelector('#page-preloader');
     let searchTime = 4000; // time for search women
+    let progressSpeed1 = 30; // time for progress bar
     document.addEventListener('DOMContentLoaded', initPage);
 
     function initPage() {
@@ -18,6 +19,7 @@
     }
 
     function handlerClickBtnIndex(e) {
+        hideAreaIndex();
         showAreaSearch();
         setTimeout(goToLogin, searchTime);
     }
@@ -32,18 +34,51 @@
     }
 
     function showAreaSearch() {
-        document.querySelector('.firstscreen__content2').style.display = 'block';
+        document.querySelector('.display.display_02').style.display = 'block';
+        loading();
+    }
+    function hideAreaSearch() {
+        document.querySelector('.display.display_02').style.display = 'none';
     }
 
     function goToLogin() {
-        preloaderOn();
-        setTimeout(hideAreaIndex, 500);
-        setTimeout(showAreaLogin, 500);
+        // preloaderOn();
+        // setTimeout(hideAreaIndex, 500);
+        // setTimeout(showAreaLogin, 500);
+        hideAreaSearch();
+        showAreaLogin();
+    }
+
+    function loading() {
+        let progressBar1 = document.querySelector('.search-progress .progress-bar');
+        progressValue(progressBar1, progressSpeed1);
+    }
+
+    function progressValue(progressBar, progressSpeed) {
+        let titles = document.querySelectorAll('.search-progress .search-progress__title .search-progress__span');
+        let tickValue = progressBar.getAttribute('aria-valuemin');
+        let endValue = progressBar.getAttribute('aria-valuemax');
+        let timerId = setTimeout(function run() {
+            progressBar.style.width = tickValue + '%';
+            progressBar.setAttribute('aria-valuenow', tickValue);
+            tickValue++;
+            if(tickValue == 30) {
+                titles.forEach(title => title.style.display = 'none');
+                titles[1].style.display = 'inline';
+            }
+            if(tickValue == 70) {
+                titles.forEach(title => title.style.display = 'none');
+                titles[2].style.display = 'inline';
+            }
+            if(tickValue <= endValue) {
+                timerId = setTimeout(run, progressSpeed);
+            }
+        }, progressSpeed);
     }
 
     function showAreaLogin() {
-        document.querySelector('.display.display_02').style.display = 'block';
-        setTimeout(preloaderOff, 500);
+        document.querySelector('.display.display_03').style.display = 'block';
+        //setTimeout(preloaderOff, 500);
     }
 
     function preloaderOn() {
