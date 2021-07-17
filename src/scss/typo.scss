@@ -22,63 +22,26 @@ h1 {
   }
   &.h1_index {
     color: $font_color;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 56px;
-    margin: 43px 0 40px;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 58px;
+    margin: 0 0 58px;
     text-align: center;
     @media (min-width: 1200px) {
       text-align: left;
-      font-size: 56px;
-      line-height: 76px;
-      margin: 90px 0 90px;
+      font-size: 50px;
+      line-height: 90px;
+      margin: 0 0 75px;
     }
     @media (min-width: 1500px) {
-      font-size: 70px;
-      line-height: 100px;
-      margin: 90px 0 90px;
+      font-size: 57px;
+      line-height: 103px;
+      margin: 0 0 75px;
     }
     @media (min-width: 1920px) {
-      font-size: 70px;
-      line-height: 100px;
-      margin: 98px 0 98px;
-    }
-  }
-  &.h1_index-main {
-    margin-bottom: 34px;
-    @media (min-width: 1200px) {
-      margin-bottom: 50px;
-    }
-    @media (min-width: 1920px) {
-      font-size: 110px;
-      line-height: 97px;
-    }
-    .h1_2ndrow {
-      @media (min-width: 1200px) {
-        font-size: 87px;
-        line-height: 97px;
-      }
-    }
-  }
-  &.h1_index-text {
-    font-size: 67px;
-    line-height: 69px;
-    color: $font_color2;
-    text-transform: uppercase;
-    margin: 0 0 42px 0;
-    @media (min-width: 1200px) {
-      font-size: 146px;
-      line-height: 140px;
-      //margin: 0;
-    }
-    @media (min-width: 1920px) {
-      font-size: 146px;
-      line-height: 96px;
-    }
-    span {
-      font-weight: 300;
-      font-size: inherit;
-      line-height: inherit;
+      font-size: 57px;
+      line-height: 103px;
+      margin: 0 0 75px;
     }
   }
   &.h1_login {
@@ -118,6 +81,32 @@ h1 {
     }
   }
 }
+
+.h1_search {
+  color: $font_color;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 58px;
+  margin: 0 0 40px;
+  text-align: center;
+  @media (min-width: 1200px) {
+    text-align: left;
+    font-size: 50px;
+    line-height: 90px;
+    margin: 0 0 75px;
+  }
+  @media (min-width: 1500px) {
+    font-size: 58px;
+    line-height: 103px;
+    margin: 0 0 96px;
+  }
+  @media (min-width: 1920px) {
+    font-size: 58px;
+    line-height: 103px;
+    margin: 0 0 96px;
+  }
+}
+
 h2 {
   font-family: $font_family2;
   font-weight: 400;
